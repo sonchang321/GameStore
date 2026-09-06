@@ -1,6 +1,8 @@
+import GameCard from './components/GameCard.jsx'
+
 function App() {
     const storeName = 'GameStore'
-    const gameCount = 3
+    const gameCount = 2
 
     return (
         <>
@@ -16,6 +18,10 @@ function App() {
                 <button type="button" disabled={gameCount === 0}>
                     게임 보기
                 </button>
+                <section className="game-list">
+                    <GameCard title="엘든 링" price={64800}/>
+                    <GameCard title="스타듀 밸리" price={16000}/>
+                </section>
             </main>
         </>
     )

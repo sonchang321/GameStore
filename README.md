@@ -11,7 +11,8 @@ React와 Spring Boot로 게임 스토어를 만들면서 웹 개발의 기본 �
 - 1-7 Promise 완료
 - 1-8 `async/await` 완료
 - 2-1 React와 JSX 완료
-- 다음 학습: 2-2 게임 카드와 props
+- 2-2 게임 카드와 props 완료
+- 다음 학습: 2-3 게임 목록
 
 ## 문서
 
