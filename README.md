@@ -4,17 +4,10 @@ React와 Spring Boot로 게임 스토어를 만들면서 웹 개발의 기본 �
 
 ## 현재 진행 상황
 
-- 0-1 웹 요청과 응답의 전체 흐름 완료
-- 0-2 개발 도구의 역할 완료
-- 1-1~1-5 JavaScript 필수 문법 완료
-- 1-6 모듈 완료
-- 1-7 Promise 완료
-- 1-8 `async/await` 완료
-- 2-1 React와 JSX 완료
-- 2-2 게임 카드와 props 완료
-- 2-3 게임 목록 완료
-- 2-4 CSS와 레이아웃 완료
-- 다음 학습: 3-1 이벤트와 useState
+- 0단계 개발 흐름과 도구 완료
+- 1단계 JavaScript 필수 기초 완료
+- 2단계 React 정적 화면 완료
+- 현재 학습: 3단계 React 상태와 검색
 
 ## 문서
 
@@ -23,6 +16,7 @@ React와 Spring Boot로 게임 스토어를 만들면서 웹 개발의 기본 �
 - [JavaScript 핵심 정리](./docs/01-javascript-basics.md)
 - [JavaScript 모듈](./docs/02-modules.md)
 - [Promise와 async/await](./docs/03-async-javascript.md)
+- [React 정적 화면](./docs/04-react-static-ui.md)
 
 ## 학습 방식
 
