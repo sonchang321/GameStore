@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import GameCard from './components/GameCard.jsx'
 import './App.css'
 
@@ -22,6 +23,7 @@ const games = [
 function App() {
     const storeName = 'GameStore'
     const gameCount = games.length
+    const [searchTerm, setSearchTerm] = useState('');
 
     return (
         <>
@@ -34,12 +36,16 @@ function App() {
                 <p className="game-summary" title="현재 판매 중인 게임 수">
                     판매 중인 게임은 {gameCount}개입니다.
                 </p>
-                <button
-                    className="browse-button"
-                    type="button"
-                    disabled={gameCount === 0}>
-                    게임 보기
-                </button>
+                <div className="search-area">
+                    <label htmlFor="game-search">게임 검색</label>
+                    <input
+                        id="game-search"
+                        type="text"
+                        value={searchTerm}
+                        onChange={(event) => setSearchTerm(event.target.value)}
+                    />
+                    <p>입력한 검색어: {searchTerm}</p>
+                </div>
                 <section className="game-list">
                     {games.map((game) => (
                         <GameCard
