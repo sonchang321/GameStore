@@ -28,3 +28,10 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Local IntelliJ IDEA ###
+/.idea/vcs.xml
+
+### Generated and temporary files ###
+/output/
+/tmp/
