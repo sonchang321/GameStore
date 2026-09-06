@@ -15,7 +15,7 @@ const games = [
     },
     {
         id: 3,
-        title: '사이버펑크 2077',
+        title: 'Cyberpunk 2077',
         price: 66000,
     },
 ]
@@ -24,6 +24,11 @@ function App() {
     const storeName = 'GameStore'
     const gameCount = games.length
     const [searchTerm, setSearchTerm] = useState('');
+    const normalizedSearchTerm = searchTerm.trim().toLowerCase()
+
+    const filteredGames = games.filter((game) =>
+        game.title.toLowerCase().includes(normalizedSearchTerm),
+    )
 
     return (
         <>
@@ -45,16 +50,21 @@ function App() {
                         onChange={(event) => setSearchTerm(event.target.value)}
                     />
                     <p>입력한 검색어: {searchTerm}</p>
+                    <p>검색 결과: {filteredGames.length}개</p>
                 </div>
-                <section className="game-list">
-                    {games.map((game) => (
-                        <GameCard
-                            key={game.id}
-                            title={game.title}
-                            price={game.price}
-                        />
-                    ))}
-                </section>
+                {filteredGames.length > 0 ? (
+                    <section className="game-list">
+                        {filteredGames.map((game) => (
+                            <GameCard
+                                key={game.id}
+                                title={game.title}
+                                price={game.price}
+                            />
+                        ))}
+                    </section>
+                ) : (
+                    <p className="empty-message">검색 결과가 없습니다.</p>
+                )}
             </main>
         </>
     )

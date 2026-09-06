@@ -67,3 +67,13 @@
     grid-template-columns: 1fr;
   }
 }
+
+.empty-message {
+  margin-top: 32px;
+  padding: 24px;
+  text-align: center;
+  color: #6b7280;
+  background-color: white;
+  border: 1px dashed #9ca3af;
+  border-radius: 10px;
+}
