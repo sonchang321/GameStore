@@ -1,8 +1,26 @@
 import GameCard from './components/GameCard.jsx'
 
+const games = [
+    {
+        id: 1,
+        title: '엘든 링',
+        price: 64800,
+    },
+    {
+        id: 2,
+        title: '스타듀 밸리',
+        price: 16000,
+    },
+    {
+        id: 3,
+        title: '사이버펑크 2077',
+        price: 66000,
+    },
+]
+
 function App() {
     const storeName = 'GameStore'
-    const gameCount = 2
+    const gameCount = games.length
 
     return (
         <>
@@ -19,8 +37,13 @@ function App() {
                     게임 보기
                 </button>
                 <section className="game-list">
-                    <GameCard title="엘든 링" price={64800}/>
-                    <GameCard title="스타듀 밸리" price={16000}/>
+                    {games.map((game) => (
+                        <GameCard
+                            key={game.id}
+                            title={game.title}
+                            price={game.price}
+                        />
+                    ))}
                 </section>
             </main>
         </>
