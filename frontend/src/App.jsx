@@ -1,4 +1,5 @@
 import GameCard from './components/GameCard.jsx'
+import './App.css'
 
 const games = [
     {
@@ -24,16 +25,19 @@ function App() {
 
     return (
         <>
-            <header>
-                <strong>{storeName}</strong>
+            <header className="site-header">
+                <strong className="site-logo">{storeName}</strong>
             </header>
 
             <main className="store">
                 <h1 className="store-title">게임 목록</h1>
-                <p title="현재 판매 중인 게임 수">
+                <p className="game-summary" title="현재 판매 중인 게임 수">
                     판매 중인 게임은 {gameCount}개입니다.
                 </p>
-                <button type="button" disabled={gameCount === 0}>
+                <button
+                    className="browse-button"
+                    type="button"
+                    disabled={gameCount === 0}>
                     게임 보기
                 </button>
                 <section className="game-list">
